@@ -31,6 +31,7 @@ public class MyServerHandler extends ChannelInboundHandlerAdapter {
 
     @Override
     public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) throws Exception {
+        //发生异常，关闭通道
         ctx.close();
 
     }

@@ -20,7 +20,7 @@ public class MyServerHandler extends ChannelInboundHandlerAdapter {
         // 获取客户端发送过来的消息
         ByteBuf byteBuf = (ByteBuf) msg;
         System.out.println("收到客户端" + ctx.channel().remoteAddress() +
-                "发送的消息");
+                "发送的消息" + byteBuf.toString(CharsetUtil.UTF_8));
     }
 
     @Override
